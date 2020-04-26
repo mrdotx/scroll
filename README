@@ -13,4 +13,4 @@ Version
 
 Last implemented commit
 -----------------------
-2020-04-25 21:32	Fix cursor position in scrollup	Jochen Sprickerhof
+2020-04-26 20:38	better quoting in scrollup testing shell script	Jan Klemkow
