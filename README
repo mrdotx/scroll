@@ -22,4 +22,4 @@ Version
 
 Last implemented commit
 -----------------------
-2020-04-26 22:09	readme: add table with performance impact	Jan Klemkow
+2020-04-28 19:20	avoid race condition with sigwinch	Jan Klemkow
