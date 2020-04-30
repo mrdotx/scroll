@@ -22,4 +22,4 @@ Version
 
 Last implemented commit
 -----------------------
-2020-04-29 21:46	Obey line length while scrolling	Jochen Sprickerhof
+2020-04-30 11:28	Fix warning for too many arguments for format	Steve Ward
