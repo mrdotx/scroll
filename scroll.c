@@ -96,8 +96,11 @@ sigwinch(int sig)
 
 	if (ioctl(STDOUT_FILENO, TIOCGWINSZ, &ws) == -1)
 		die("ioctl:");
-	if (ioctl(mfd, TIOCSWINSZ, &ws) == -1)
+	if (ioctl(mfd, TIOCSWINSZ, &ws) == -1) {
+		if (errno == EBADF)	/* child already exited */
+			return;
 		die("ioctl:");
+	}
 	kill(-child, SIGWINCH);
 	doredraw = true;
 }
@@ -208,8 +211,17 @@ skipesc(char c)
 
 			/* don't save cursor move or clear screen */
 			/* esc sequences to log */
-			if (c == 'H' || strcmp(buf, "2J") == 0)
+			switch (c) {
+			case 'A':
+			case 'B':
+			case 'C':
+			case 'D':
+			case 'H':
+			case 'J':
+			case 'K':
+			case 'f':
 				return true;
+			}
 		}
 		break;
 	}
