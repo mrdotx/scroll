@@ -2,6 +2,7 @@
 
 set -eu
 
+export POSIXLY_CORRECT=1
 num=1000000
 seq=seq
 
