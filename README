@@ -22,4 +22,4 @@ Version
 
 Last implemented commit
 -----------------------
-2020-05-07 02:54	Fix typo and spaces with adjustments from me.	Steve Ward
+2020-05-16 21:09	handle carriage0-return correctly	Jan Klemkow
