@@ -1,0 +1,7 @@
+# path:       /home/klassiker/.local/share/repos/scroll/.gitignore
+# author:     klassiker [mrdotx]
+# github:     https://github.com/mrdotx/scroll
+# date:       2020-08-31T17:52:19+0200
+
+config.h
+scroll
